@@ -4,8 +4,9 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-app.MapControllers();
 app.UseStaticFiles();
+app.UseRouting();
+app.MapControllers();
 
 //app.MapGet("/", () => "Hello World!");
 
