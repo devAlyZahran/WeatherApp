@@ -20,8 +20,8 @@ namespace WeatheAppDemo.Controllers
         [Route("/")]
         public IActionResult Index()
         {
-            //List<CityWeather> cityWeathers = CityWeathers.ToList();
-            List<CityWeather> cityWeathers = null;
+            List<CityWeather> cityWeathers = CityWeathers.ToList();
+            //List<CityWeather> cityWeathers = null;
 
             if (cityWeathers == null || cityWeathers.Count == 0)
             {
