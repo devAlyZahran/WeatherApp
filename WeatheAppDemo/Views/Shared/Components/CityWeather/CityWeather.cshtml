@@ -1,0 +1,8 @@
+﻿@model CityWeather
+
+<div class="card @ViewBag.color">
+    <p style="font-weight: bolder; font-size: 22px;">@Model.CityName</p>
+    <p class="time">@Model.DateAndTime.ToShortTimeString()</p>
+    <p class="temp">@Model.TemperatureFahrenheit °F</p>
+    <a href="/weather/@Model.CityUniqueCode" class="back-link">Details</a>
+</div>

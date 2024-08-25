@@ -1,7 +1,7 @@
 ﻿@model CityWeather
 
 <div class="card @ViewBag.color">
-    <h2>@Model.CityName</h2>
+    <p style="font-weight: bolder; font-size: 27px;">@Model.CityName</p>
     <p class="time">@Model.DateAndTime.Date.ToString("dd MMM yyyy")</p>
     <p class="time">@Model.DateAndTime.ToShortTimeString()</p>
     <p class="temp">@Model.TemperatureFahrenheit °F</p>
