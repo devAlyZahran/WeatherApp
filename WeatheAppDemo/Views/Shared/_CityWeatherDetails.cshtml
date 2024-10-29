@@ -1,11 +1,23 @@
 ﻿@model CityWeather
 
+@{
+    string q = Context.Request.Path.Value ?? string.Empty;
+}
+
 <div class="card @ViewBag.color">
     <h2>@Model.CityName</h2>
     <p class="time">@Model.DateAndTime.Date.ToString("dd MMM yyyy")</p>
     <p class="time">@Model.DateAndTime.ToShortTimeString()</p>
     <p class="temp">@Model.TemperatureFahrenheit °F</p>
-    <a href="/" class="back-link">Back to Weather Home Page</a>
+    @if (q.Contains("/weather/"))
+    {
+        <a href="/" class="back-link">Back to Weather Home Page</a>
+    }
+    else
+    {
+        <a href="/weather/@Model.CityUniqueCode" class="back-link">Go To Details</a>
+    }
+    
 </div>
 
 
